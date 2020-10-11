@@ -55,7 +55,7 @@ On peut avoir les données de validation comme troisième partie.
 1. On fait entrainer notre système sur les données d'apprentissage pour avoir un modèle
 1. Si on utilise des données de validation, on teste la performance de notre modèle.
 Si la performance dépasse un certain seuil, on passe vers l'étape suivante.
-Sinon, on change les paramètres de l'algorithme d'apprentissage ou on on récupère plus de données d'entrainement, et on refaire l'étape précédente.
+Sinon, on change les paramètres de l'algorithme d'apprentissage ou on récupère plus de données d'entrainement, et on refait l'étape précédente.
 1. On utilise les données de test (évaluation) afin de décider la performance du modèle et le comparer avec un système de base.
 Si on n'a pas utilisé des données de validation, on peut faire l'étape précédente ici.
 Mais, il faut faire attention: si on valide plusieurs fois sur les données de test, le système va être adapté aux données de test.
@@ -67,9 +67,9 @@ Or, l'intérêt des données de test est d'évaluer le modèle sur des nouvelles
 | *Apprentissage supervisé* |
 
 
-Selon le type d'annotation, on peut remarquer deux types des algorithmes d'apprentissage automatique: classement et régression.
+Selon le type d'annotation, on peut remarquer deux types d'algorithmes d'apprentissage automatique: classification et régression.
 
-#### A) Classement (Classification supervisée)
+#### A) CLassification (Classification supervisée)
 
 Lorsque le résultat attendu est une classe (groupe).
 
@@ -142,9 +142,9 @@ Le F1 mesure de notre modèle précédent est (2 \* 50 \* 33)/(50 + 33) = 3300/8
 
 ##### La corrélation de matthews
 
-C'est un coéfficient pour mesurer de qualité en tenant compte des données imbalancées.
-Cette mesure est connue, aussi, sous le nom: coefficient Phi.
-Un modèle peut avoir des coefficients allant de -1 jusqu'à +1:
+C'est un coéfficient pour mesurer la qualité en tenant compte des données imbalancées.
+Cette mesure est connue, aussi, sous le nom: coéfficient Phi.
+Un modèle peut avoir des coéfficient allant de -1 jusqu'à +1:
 - -1: les prédictions sont totalement irronnées.
 - 0: la performance du modèle est comparable avec un système aléatoire (random).
 - 1: les prédictions sont parfaites.
@@ -255,10 +255,10 @@ L'algorithme de réduction de dimension a comme but d'apprendre comment représe
 
 ## I-4 Limites de l'apprentissage automatique
 
-- Pour des tâches complexes, on a besoin d'une grande quantité de données
+- Pour des tâches complexes, on a besoin d'une grande quantité de données.
 - Dans le cas de l'apprentissage supervisé, l'annotation de données est une tâche fastidieuse; qui prend beaucoup de temps.
-- Le traitement automatique de langages naturels (TALN) reste un défit
-- Les données d'entrainement sont souvent biaisées
+- Le traitement automatique de langages naturels (TALN) reste un défit.
+- Les données d'entrainement sont souvent biaisées.
 
 [(Sommaire)](#sommaire)
 
@@ -268,7 +268,7 @@ L'algorithme de réduction de dimension a comme but d'apprendre comment représe
 
 #### Deep Learning
 
-Les outils suivants sont conçus pour l'apprentissage approfondi qui est basé le réseau de neurones.
+Les outils suivants sont conçus pour l'apprentissage approfondi qui est basé sur le réseau de neurones.
 - Outil: nom et lien de l'outil (ordre alphabétique)
 - Licence: la licence de l'outil. Ici, on ne s'intéresse que par les outils open sources.
 - écrit en: le langage de programmation utilisé pour écrire cet outil.
@@ -414,7 +414,7 @@ Apprentissage automatique comme un service (MLaaS: Machine Learning as a Service
 ### Evaluation du classement
 
 Ici, on va utiliser l'outil **scikit-learn** pour l'évaluation.
-On va créer une liste des résulats attendus et une autre qu'on suppose être la liste des résulatats générés par notre modèle.
+On va créer une liste des résultats attendus et une autre qu'on suppose être la liste des résultats générés par notre modèle.
 
 #### Exemple 1: classement binaire
 
@@ -429,7 +429,7 @@ Ensuite, on a testé ce modèle avec 20 examples qui a donné la matrice de conf
 | désirable (modèle) | 2 | 16 | 18 |
 | Total (réel) | 3 | 17 |  |
 
-On annote les courniers indésirables avec 1 et ceux désirables avec 0.
+On annote les courriers indésirables avec 1 et ceux désirables avec 0.
 Dans la classification binaire de **scikit-learn**, la classe positive est annotée par 1 par défaut.
 Cela peut être changé en utilisant l'option **pos_label**.
 La fonction **str** est juste pour transformer un nombre vers une chaîne de charactères.
@@ -497,7 +497,7 @@ weighted avg    0.83        0.85      0.84        20
 
 Consulter le fichier [codes/eval/classer2.py](codes/eval/classer2.py)
 
-Reprenons l'exemple des classification des animaux en chat, chien ou vache.
+Reprenons l'exemple de classification des animaux en chat, chien ou vache.
 Supposant notre test a donné la matrice de confusion suivante:
 
 |  | chat (réel) | chien (réel) | vache (réel) | Total (prédit) |
